@@ -1,0 +1,25 @@
+<html>
+<head>
+    {% block imports %}
+      <script type="text/javascript" src="/static/js/jquery.min.js" ></script>
+    {% endblock %}
+</head>
+
+
+<body>
+
+    <div class = "header">
+    </div>
+    
+    <div class = "main_menu">
+        <ul class = "menu">
+            <li> <a href = "/my_tweets/"> My time line </a> </li>
+            <li> <a href = "/find_tweets/"> Search feeds </a> </li>
+        </ul>
+    </div>
+  
+  {% block content %}
+  {% endblock %}
+  
+</body>
+</html>

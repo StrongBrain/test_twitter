@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block imports %}
+     <script type="text/javascript" src="/static/js/jquery.min.js" ></script>
+     <script type="text/javascript" src="/static/js/script.js" ></script>
+    
+{% endblock %}
+
+{%block content%}
+
+<input type = "text"  id = "textfield">
+    <input type="button" value = "Find" onClick = "findTweet()"">
+    <div class="feeds">
+        {% for tweet in find.find %}
+            <p> {{tweet.user.screen_name}}:
+            <img src ={{tweet.user.profile_image_url}}> 
+            </img> </p>
+            {{tweet.text}}
+            {{tweet.date}}
+        {% endfor %}
+        </div>
+       
+{% endblock%}
+
